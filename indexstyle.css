@@ -1,0 +1,245 @@
+:root {
+    --main-bg-color: #31511E;
+    --main-text-color: #1A1A19;
+    --complementary-bg-color: #859F3D;
+    --white: #F6FCDF;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #fff5d7;
+    font-family: 'Playfair Display', serif;
+}
+
+.header{
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--complementary-bg-color);
+    margin: 0.5em;
+    border-radius: 2em;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: rgba(26, 26, 25, 0.4) 0.5em 0.5em 1em;
+    outline: #111 solid 0.2em;
+}
+
+header a img{
+    width: 10em;
+    height: auto;
+    margin: 0.5em;
+}
+
+.main {
+    display: flex;
+    background-color: var(--main-bg-color);
+    margin: 0.5em;
+    border-radius: 2em;
+    width: 60%;
+    box-shadow: rgba(26, 26, 25, 0.7) 0.5em 0.5em 1em;
+    outline: #111 solid 0.2em;
+
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin-right: 2em;
+}
+
+.headernav div a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5em;
+    background-color: var(--main-bg-color);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    transition: transform 0.3s ease;
+
+    outline: #111 solid 0.1em;
+}
+
+.headernav a:hover {
+    color: var(--main-text-color);
+    transform: scale(1.1);
+}
+
+.headerlinks{
+    padding: 1em;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--main-text-color);
+    min-width: 10em;
+    z-index: 1;
+    border-radius: 0.5em;
+    padding: 0.5em 0;
+    margin: 0.5em;
+}
+
+.dropdown-content a {
+    color: var(--white);
+    padding: 0.5em;
+    margin: 0.5em;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+    width: 10rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #31400a;
+}
+
+.headerlinks:hover .dropdown-content {
+    display: block;
+}
+
+.side {
+    flex: 1;
+    background-color: var(--white);
+    padding: 1em;
+    border-radius: 2em;
+    margin: 0.5em;
+}
+
+.content {
+    flex: 3;
+    background-color: var(--main-bg-color);
+    padding: 1em;
+    border-radius: 2em;
+}
+
+#titlu {
+    color: var(--white);
+    font-size: 4em;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#welcometext {
+    color: var(--white);
+    font-size: 2em;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+#titluretetazilei {
+    color: var(--main-text-color);
+    font-size: 3em;
+    text-align: center;
+}
+
+.login-menu {
+    background-color: var(--main-bg-color);
+    padding: 1em;
+    border-radius: 1em;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(26, 26, 25, 0.7) 0.5em 0.5em 1em;
+    outline: #111 solid 0.15em;
+
+}
+
+.login-menu form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.login-menu label, .login-menu input {
+    width: 80%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-menu h2 {
+    color: var(--white);
+    text-align: center;
+}
+
+.login-menu label {
+    color: var(--white);
+    margin: 0.5em 0 0.2em;
+}
+
+.login-menu input {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    border: none;
+}
+
+.login-menu button:hover {
+    background-color: #31400a;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    max-width: 300px;
+
+}
+
+.button-group button {
+    flex: 1;
+    padding: 0.5em;
+    background-color: var(--complementary-bg-color);
+    color: var(--white);
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 0.25em;
+}
+
+.button-group button:hover {
+    background-color: #31400a;
+}
+
+@media (max-width: 1200px) {
+    .header {
+        width: 100%;
+        margin: 1em;
+    }
+    .main {
+        width: 100%;
+        margin: 1em;
+    }
+    body{
+        padding: 0.5em;
+    }
+}
+
+@media (max-width: 750px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
