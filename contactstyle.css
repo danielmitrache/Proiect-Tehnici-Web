@@ -45,17 +45,6 @@ header a img{
     margin: 0.5em;
 }
 
-.main {
-    display: flex;
-    background-color: var(--main-bg-color);
-    margin: 0.5em;
-    border-radius: 2em;
-    width: 60%;
-    box-shadow: rgba(26, 26, 25, 0.7) 0.5em 0.5em 1em;
-    outline: #111 solid 0.2em;
-
-}
-
 nav {
     display: flex;
     justify-content: flex-start;
@@ -115,101 +104,16 @@ nav {
     display: block;
 }
 
-main {
+.main {
     display: flex;
+    flex-direction: column;
     background-color: var(--main-bg-color);
     margin: 0.5em;
     border-radius: 2em;
     width: 60%;
     box-shadow: rgba(26, 26, 25, 0.7) 0.5em 0.5em 1em;
     outline: #111 solid 0.2em;
-
-}
-
-.content {
-    background-color: var(--main-bg-color);
-    padding: 1em;
-    border-radius: 2em;
-}
-
-.content h1, h2, h3{
-    color: var(--white);
-}
-
-#titlu {
-    display: flex;
-    font-size: 2em;
-    justify-content: center;
-}
-
-#welcometext {
-    display: flex;
-    font-size: 1.5em;
-    justify-content: space-between;
-    text-indent: 2em;
-}
-
-.calendar h2 {
-    display: flex;
-    font-size: 2em;
-    justify-content: center;
-}
-
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 5em;
-    font-size: 1em;
-    font-family: 'Playfair Display', serif;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
-    outline: #111 solid 0.2em;
-
-}
-
-table th {
-    background-color: var(--complementary-bg-color);
-    color: var(--main-text-color);
-    padding: 0.75em;
-    border-bottom: 0.2em solid var(--complementary-bg-color);
-    font-weight: bold;
-    font-size: 1.5em;
-    text-align: center;
-}
-
-
-table td {
-    padding: 0.75em;
-    border-bottom: 0.1em solid var(--complementary-bg-color);
-}
-
-table tr:nth-child(odd) {
-    background-color: #f2f2f2;
-}
-
-table tr:nth-child(even) {
-    background-color: #ffffff;
-}
-
-table tr:hover {
-    background-color: #e0e0e0;
-}
-
-table td:first-child {
-    font-weight: bold;
-}
-
-table td:last-child {
-    text-align: center;
-    font-style: italic;
-}
-
-#text-inceput {
-    margin-bottom: 7em;
-}
-
-.calendar h2{
-    text-decoration: underline;
+    overflow: hidden;
 }
 
 @media (max-width: 1200px) {
@@ -217,7 +121,7 @@ table td:last-child {
         width: 100%;
         margin: 1em;
     }
-    main {
+    .main {
         width: 100%;
         margin: 1em;
     }

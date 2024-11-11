@@ -31,7 +31,7 @@ body{
     justify-content: space-between;
     background-color: var(--complementary-bg-color);
     margin: 0.5em;
-    border-radius: 2em;
+    border-radius: 0 0 2em 2em;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -145,7 +145,7 @@ nav {
 }
 
 #titluretetazilei {
-    color: var(--main-text-color);
+    color: var(--white);
     font-size: 3em;
     text-align: center;
 }
@@ -222,6 +222,108 @@ nav {
 .button-group button:hover {
     background-color: #31400a;
 }
+
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+    padding: 1em;
+    background-color: var(--complementary-bg-color);
+    border-radius: 2em;
+    box-shadow: rgba(26, 26, 25, 0.7) 0.5em 0.5em 1em;
+    outline: #111 solid 0.2em;
+}
+
+.recipe img {
+    width: 80%;
+    height: auto;
+    border-radius: 2em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+    margin: 1em;
+    border: 0.5em solid #111;
+}
+
+.recipe h3 {
+    color: var(--main-text-color);
+    font-size: 3em;
+    text-align: center;
+}
+
+.content > a{
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.content > a:hover{
+    color: var(--complementary-bg-color);
+}
+
+
+.popular-recipes, .newsletter-widget {
+    background-color: var(--main-bg-color);
+    padding: 1em;
+    border-radius: 1em;
+    margin-top: 1em;
+    box-shadow: rgba(26, 26, 25, 0.7) 0.5em 0.5em 1em;
+    outline: #111 solid 0.15em;
+}
+
+.popular-recipes h2, .newsletter-widget h2 {
+    color: var(--white);
+    text-align: center;
+}
+
+.popular-recipes ul {
+    list-style-type: disc;
+}
+
+.popular-recipes li {
+    margin: 0.5em;
+}
+
+.popular-recipes a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1vw;
+}
+
+.popular-recipes a:hover {
+    color: var(--complementary-bg-color);
+}
+
+.newsletter-widget form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter-widget input {
+    width: 80%;
+    max-width: 300px;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    border: none;
+}
+
+.newsletter-widget button {
+    background-color: var(--complementary-bg-color);
+    color: var(--white);
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-widget button:hover {
+    background-color: #31400a;
+}
+
+
 
 @media (max-width: 1200px) {
     .header {
