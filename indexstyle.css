@@ -287,7 +287,7 @@ nav {
     color: var(--white);
     text-decoration: none;
     transition: color 0.3s ease;
-    font-size: 1vw;
+    font-size: 1em;
 }
 
 .popular-recipes a:hover {
