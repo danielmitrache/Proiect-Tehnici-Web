@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact</title>
     <link rel="stylesheet" href="contactstyle.css">
   <link rel="icon" href="Imagini/favicon.ico" type="image/x-icon">
@@ -10,7 +11,7 @@
 <body>
 <div class="container">
   <header class="header">
-    <a href="index.html"><img src="Imagini/LOGOPNG.png"></a>
+    <a href="index.html"><img src="Imagini/LOGOPNG.png" alt="Logo"></a>
     <nav class="headernav">
       <div class="headerlinks">
         <a id="calendarpost">Calendar Post</a>
@@ -29,6 +30,22 @@
     </nav>
   </header>
   <main class="main">
+    <section class="contact-form">
+      <h1>Contactati-ne!</h1>
+      <form action="submit_contact.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </section>
   </main>
+</div>
 </body>
 </html>
