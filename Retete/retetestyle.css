@@ -117,11 +117,15 @@ nav {
 }
 
 .recipe{
+    /*display: flex;*/
+    /*flex-direction: row;*/
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-rows: auto;
     gap: 1em;
     background-color: var(--complementary-bg-color);
     border: black solid 0.1em;
+    align-content: space-around;
 }
 
 .recipe img{
@@ -131,7 +135,7 @@ nav {
     box-shadow: rgba(26, 26, 25, 0.7) 0.5em 0.5em 1em;
     outline: #111 solid 0.1em;
     display: block;
-    margin: auto;
+    margin:auto auto auto 3em;
 }
 
 
@@ -159,7 +163,6 @@ nav {
 
 .search-filter {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin: 1em 0;
     padding: 0.5em;
@@ -184,6 +187,43 @@ nav {
     flex: 0.5;
 }
 
+.search-filter {
+    display: flex;
+    gap: 10px;
+    align-content: space-between;
+}
+
+#search-button {
+    background-color: var(--complementary-bg-color);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#search-button:hover {
+    background-color: var(--main-text-color);
+}
+
+.favourite-button {
+    background-color: var(--main-text-color);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    color:white;
+    border: none;
+    margin: auto 1.5em auto auto;
+    padding: 0.3em;
+    cursor: pointer;
+    outline: none;
+    border-radius: 1em;
+}
 
 @media (max-width: 1200px) {
     .header {

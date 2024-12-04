@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="R-style.css">
     <link rel="icon" href="../Imagini/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="R-script.js" defer></script>
 </head>
 <body>
 <div class="container">
@@ -25,8 +26,12 @@
                 <a href="retete.html">Retete</a>
             </div>
             <div class="headerlinks">
-                <a href="../Contact%20Page/contact.html">Contact</a>
-            </div>
+                <a>Mai Multe</a>
+                <div class="dropdown-content">
+                    <a href="../Contact%20Page/contact.html">Contact</a>
+                    <a href="../About%20Page/listacumparaturi.html">Fa o lista de cumparaturi</a>
+                    <a href="../About%20Page/favorite.html">Retete favorite</a>
+                </div>            </div>
         </nav>
     </header>
     <main class="main">
@@ -48,7 +53,7 @@
                                 <option value="5">5</option>
                             </select>
                         </div>
-                        <table>
+                        <table id="tabel-ingrediente">
                             <thead>
                             <tr>
                                 <th>Cantitate</th>
@@ -89,7 +94,7 @@
                                 <td>patrunjel</td>
                             </tr>
                             <tr>
-                                <td>0,13 bucata</td>
+                                <td>0.13 bucata</td>
                                 <td>zucchini</td>
                             </tr>
                             <tr>
@@ -118,6 +123,7 @@
                             <li>Pranz</li>
                             <li>Sanatos</li>
                             <li>Garnituri</li>
+                            <li>Cina</li>
                         </ul>
                     </div>
                 </div>

@@ -1,0 +1,22 @@
+{
+  "recipes": [
+  {
+    "title": "Mamaliga la gratar cu spanac si ciuperci",
+    "link": "../Retete/R-mamaligalagratar.html",
+    "image": "../Imagini/MamaligaLaGratar.jpg",
+    "tags": ["La gratar", "Sanatos", "Pranz", "Fel principal"]
+  },
+  {
+    "title": "Pilaf de orez cu legume",
+    "link": "../Retete/R-pilaf.html",
+    "image": "../Imagini/Pilaf.jpg",
+    "tags": ["Fel principal", "Pranz", "Cina", "Sanatos", "Garnituri"]
+  },
+  {
+    "title": "Chiftelute de legume in sos de rosii",
+    "link": "../Retete/R-chiftelute.html",
+    "image": "../Imagini/Chiftelute.jpg",
+    "tags": ["Fel principal", "Pranz", "Cina", "Sanatos"]
+  }
+]
+}

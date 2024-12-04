@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="R-style.css">
   <link rel="icon" href="../Imagini/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <script src="R-script.js" defer></script>
 </head>
 <body>
 <div class="container">
@@ -25,8 +26,12 @@
         <a href="retete.html">Retete</a>
       </div>
       <div class="headerlinks">
-        <a href="../Contact%20Page/contact.html">Contact</a>
-      </div>
+        <a>Mai Multe</a>
+        <div class="dropdown-content">
+          <a href="../Contact%20Page/contact.html">Contact</a>
+          <a href="../About%20Page/listacumparaturi.html">Fa o lista de cumparaturi</a>
+          <a href="../About%20Page/favorite.html">Retete favorite</a>
+        </div>      </div>
     </nav>
   </header>
   <main class="main">
@@ -48,7 +53,7 @@
                 <option value="5">5</option>
               </select>
             </div>
-            <table>
+            <table id="tabel-ingrediente">
               <thead>
               <tr>
                 <th>Cantitate</th>
@@ -57,19 +62,19 @@
               </thead>
               <tbody>
               <tr>
-                <td>0,5 bucata</td>
+                <td>0.5 bucata</td>
                 <td>morcov</td>
               </tr>
               <tr>
-                <td>1,25 - 1,5 bucati</td>
+                <td>1.25 - 1.5 bucati</td>
                 <td>cartofi</td>
               </tr>
               <tr>
-                <td>0,5 bucati</td>
+                <td>0.5 bucati</td>
                 <td>ceapa</td>
               </tr>
               <tr>
-                <td>0,25 bucata</td>
+                <td>0.25 bucata</td>
                 <td>dovlecel</td>
               </tr>
               <tr>
@@ -85,15 +90,15 @@
                 <td>piper</td>
               </tr>
               <tr>
-                <td>0,25 legatura</td>
+                <td>0.25 legatura</td>
                 <td>marar</td>
               </tr>
               <tr>
-                <td>0,25 cana</td>
+                <td>0.25 cana</td>
                 <td>faina</td>
               </tr>
               <tr>
-                <td>0,25 lingura</td>
+                <td>0.25 lingura</td>
                 <td>ulei de masline</td>
               </tr>
               <tr>
@@ -105,7 +110,7 @@
                 <td>busuioc</td>
               </tr>
               <tr>
-                <td>0,25 legatura</td>
+                <td>0.25 legatura</td>
                 <td>patrunjel</td>
               </tr>
               </tbody>
