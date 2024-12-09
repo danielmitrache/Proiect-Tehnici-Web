@@ -43,6 +43,18 @@ function filterRecipesEvent(event) {
         }
         return;
     }
+    else if (filterValue === 'favorite') {
+        const favouriteRecipes = JSON.parse(localStorage.getItem('favouritedRecipes')) || [];
+        for(let recipe of recipes){
+            let target = recipe.dataset.id;
+            if(favouriteRecipes.includes(target)){
+                recipe.style.display = 'grid';
+            } else {
+                recipe.style.display = 'none';
+            }
+        }
+        return;
+    }
     for(let recipe of recipes){
         const recipeTags = recipe.dataset.tags.split(',');
         if(recipeTags.includes(filterValue)){
@@ -71,7 +83,7 @@ function favouriteRecipeClickEvent(event) {
         }
     } else {
         this.classList.add('favourite');
-        this.style.backgroundColor = '#756c01';
+        this.style.backgroundColor = '#478005';
         this.innerHTML = 'Scoate de la favorite!';
         favouriteButtons[recipeId] = true;
         favouritedRecipes.push(recipeId);
@@ -90,7 +102,7 @@ function loadFavouriteButtons(){
         if(favouriteButtons[recipeId]){
             let favouriteButton = recipe.querySelector('.favourite-button');
             favouriteButton.classList.add('favourite');
-            favouriteButton.style.backgroundColor = '#756c01';
+            favouriteButton.style.backgroundColor = '#478005';
             favouriteButton.innerHTML = 'Scoate de la favorite!';
         }
     }

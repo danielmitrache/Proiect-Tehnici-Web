@@ -206,6 +206,7 @@ nav {
     border-radius: 4px;
     margin-left: 20px;
     margin-right: 20px;
+    transition: background-color 0.3s ease;
 }
 
 #search-button:hover {
@@ -217,12 +218,18 @@ nav {
     font-family: 'Playfair Display', serif;
     font-size: 1.2em;
     color:white;
-    border: none;
     margin: auto 1.5em auto auto;
     padding: 0.3em;
     cursor: pointer;
     outline: none;
     border-radius: 1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid black;
+}
+
+.favourite-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 1px 15px 2px rgba(0,0,0,0.82);
 }
 
 @media (max-width: 1200px) {

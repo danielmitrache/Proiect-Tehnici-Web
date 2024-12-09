@@ -23,15 +23,16 @@
         </div>
       </div>
       <div class="headerlinks">
-        <a href="R-mamaligalagratar.html">Retete</a>
+        <a href="retete.html">Retete</a>
       </div>
       <div class="headerlinks">
         <a>Mai Multe</a>
         <div class="dropdown-content">
           <a href="../Contact%20Page/contact.html">Contact</a>
           <a href="../About%20Page/listacumparaturi.html">Fa o lista de cumparaturi</a>
-          <a href="../About%20Page/favorite.html">Retete favorite</a>
-        </div>      </div>
+          <a href="../Own%20Recipes%20Page/reteteproprii.html">Propriile retete</a>
+        </div>
+      </div>
     </nav>
   </header>
   <main class="main">
@@ -39,6 +40,8 @@
       <label for="search"></label><input type="text" id="search" placeholder="Căutați rețete...">
       <label for="filter"></label><select id="filter">
         <option value="Toate">Toate</option>
+        <option value="Favorite">⭐ Favorite</option>
+        <option value="Fel principal">Fel principal</option>
         <option value="La gratar">La gratar</option>
         <option value="Mic dejun">Mic dejun</option>
         <option value="Pranz">Pranz</option>
@@ -49,7 +52,7 @@
       <button id="search-button">Cauta</button>
     </div>
     <div class="recipe-list" id="recipe-list">
-      <div class="recipe" data-id="1" data-tags="la gratar,sanatos,pranz,fel principal">
+      <div class="recipe" data-id="1" data-tags="la gratar,sanatos,pranz">
         <img src="../Imagini/MamaligaLaGratar.jpg" alt="Mamaliga la gratar" class="recipe-image">
         <div class="recipe-info">
           <h2>Mamaliga la gratar cu spanac si ciuperci</h2>

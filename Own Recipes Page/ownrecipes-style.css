@@ -1,0 +1,219 @@
+:root {
+    --main-bg-color: #31511E;
+    --main-text-color: #1A1A19;
+    --complementary-bg-color: #859F3D;
+    --white: #F6FCDF;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #fff5d7;
+    font-family: 'Playfair Display', serif;
+}
+
+.header{
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--complementary-bg-color);
+    margin: 0.5em;
+    border-radius: 0 0 2em 2em;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: rgba(26, 26, 25, 0.4) 0.5em 0.5em 1em;
+    outline: #111 solid 0.2em;
+}
+
+header a img{
+    width: 10em;
+    height: auto;
+    margin: 0.5em;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin-right: 2em;
+}
+
+.headernav div a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5em;
+    background-color: var(--main-bg-color);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    transition: transform 0.3s ease;
+
+    outline: #111 solid 0.1em;
+}
+
+.headernav a:hover {
+    color: var(--main-text-color);
+    transform: scale(1.1);
+}
+
+.headerlinks{
+    padding: 1em;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--main-text-color);
+    min-width: 10em;
+    z-index: 1;
+    border-radius: 0.5em;
+    padding: 0.5em 0;
+    margin: 0.5em;
+}
+
+.dropdown-content a {
+    color: var(--white);
+    padding: 0.5em;
+    margin: 0.5em;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+    width: 10rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #31400a;
+}
+
+.headerlinks:hover .dropdown-content {
+    display: block;
+}
+
+.manage-recipes-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.manage-recipes-buttons button{
+    background-color: var(--complementary-bg-color);
+    color: var(--main-text-color);
+    border: 0.1em solid black;
+    border-radius: 0.8em;
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 1.7em;
+    cursor: pointer;
+}
+
+.manage-recipes-buttons button:hover{
+    background-color: #80900D;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-bg-color);
+    margin: 0.5em;
+    border-radius: 2em;
+    width: 60%;
+    box-shadow: rgba(26, 26, 25, 0.7) 0.5em 0.5em 1em;
+    outline: #111 solid 0.2em;
+    overflow: hidden;
+}
+
+
+#add-recipe-form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: rgba(26, 26, 25, 0.4) 0.5em 0.5em 1em;
+    margin: 1em 0;
+}
+
+#add-recipe-form label {
+    margin: 0.5em 0 0.2em 0;
+    font-weight: bold;
+}
+
+#add-recipe-form input[type="text"],
+#add-recipe-form textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 0.1em solid var(--main-text-color);
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+    font-family: 'Playfair Display', serif;
+}
+
+#add-recipe-form button[type="submit"] {
+    background-color: var(--main-bg-color);
+    color: var(--white);
+    border: 0.1em solid black;
+    border-radius: 0.8em;
+    padding: 0.5em;
+    font-size: 1.2em;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+#add-recipe-form button[type="submit"]:hover {
+    background-color: var(--main-text-color);
+}
+
+@media (max-width: 1200px) {
+    .header {
+        width: 100%;
+        margin: 1em;
+    }
+    .main {
+        width: 100%;
+        margin: 1em;
+    }
+    body{
+        padding: 0.5em;
+    }
+}
+
+@media (max-width: 750px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 540px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main {
+        display: grid;
+        overflow: hidden;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 95%;
+    }
+    body, .container, .header, .main, .content, .side{
+        margin: 0;
+        padding: 0;
+        font-size: 0.9em;
+    }
+}

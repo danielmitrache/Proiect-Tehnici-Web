@@ -1,0 +1,117 @@
+:root {
+    --main-bg-color: #31511E;
+    --main-text-color: #1A1A19;
+    --complementary-bg-color: #859F3D;
+    --white: #F6FCDF;
+}
+
+.recipe-list {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.own-recipe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    border: 0.2em solid black;
+    background-color: #21410E;
+}
+
+.own-recipe:nth-child(odd) {
+    background-color: #3f5f2f;
+}
+
+.own-recipe-content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: left;
+    margin: auto auto auto 5em;
+    gap: 5em;
+    padding: 0;
+}
+
+.recipe-title{
+    color: var(--white);
+    font-size: 2em;
+    text-decoration: underline;
+    text-align: center;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 1em 0;
+    background-color: var(--main-bg-color);
+    color: var(--white);
+    border-radius: 2em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+th, td {
+    padding: 1em;
+    text-align: center;
+    border-bottom: 1px solid var(--complementary-bg-color);
+}
+
+th {
+    background-color: var(--complementary-bg-color);
+    color: var(--main-text-color);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+thead {
+    border-radius: 2em 2em 0 0;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.recipe-instructions {
+    font-size: 1em;
+    color: var(--white);
+    line-height: 1.8em;
+}
+
+
+
+.recipe-header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.recipe-header-container button {
+    background-color: #ba3322;
+    color: var(--main-text-color);
+    border: 0.1em solid black;
+    border-radius: 0.8em;
+    margin-left: auto;
+    margin-right: 1.5em;
+    cursor: pointer;
+}
+
+.recipe-header-container button:hover {
+    background-color: #af4f3f;
+}
