@@ -2,20 +2,57 @@
   "recipes": [
   {
     "title": "Mamaliga la gratar cu spanac si ciuperci",
-    "link": "../Retete/R-mamaligalagratar.html",
     "image": "../Imagini/MamaligaLaGratar.jpg",
+    "instructions": "Pasul 1\n\nPentru inceput, pregateste mamaliga.\n\nPune 1 litru de apa intr-un vas, adauga sare si cand incepe sa fiarba apa, adauga malaiul. Amesteca pana se ingroasa.\n\nPregateste o tava termorezistenta si adauga mamaliga obtinuta in ea. Niveleaza bine cu ajutorul unei spatule si las-o la racit.\n\nPasul 2\n\nSpala, usuca si taie felii ciupercile. Spala si usuca spanacul. Curata si toaca marunt usturoiul.\n\nIntr-o tigaie, adauga putin ulei si usturoiul tocat marunt. Lasa-l cateva secunde si apoi adauga ciupercile taiate felii. Asezoneaza cu sare si piper si caleste-le pana se evapora tot lichidul.\n\nCand se evapora lichidul, adauga faina, bautura vegetala pe baza de ovaz si amesteca bine totul. Adauga si spanacul spalat si uscat si caleste pana se inmoaie. Asezoneaza cu sare si piper. Pune amestecul de ciuperci, usturoi si spanac intr-un bol.\n\nPasul 3\n\nTaite in patrate mamaliga racita si apoi prajeste-o pe ambele parti pe grill-ul pe care l-ai uns cu putin ulei.\n\nPune pe fiecare patrat de mamaliga prajita 2, 3 lingurite de ciuperci, usturoi si spanac.\n\nPofta buna!",
+    "ingredients": {
+      "apa": "0.2 l",
+      "malai": "58 g",
+      "ciuperci": "80 g",
+      "spanac": "41 g",
+      "usturoi": "0.3 catel",
+      "bautura din ovaz": "11 ml",
+      "faina": "2 g",
+      "sare": ""
+    },
     "tags": ["La gratar", "Sanatos", "Pranz", "Fel principal"]
   },
   {
     "title": "Pilaf de orez cu legume",
-    "link": "../Retete/R-pilaf.html",
     "image": "../Imagini/Pilaf.jpg",
+    "instructions": "Pregateste supa inainte. Scoate morcovii din supa si toaca-i cubulete. Spala si taie ardeiul gras, ardeiul capia si zucchini.\n\nPune ulei intr-o oala si cand s-a incins putin, adauga orezul spalat si scurs. Caleste-l putin si apoi incepe sa adaugi supa treptat amestecand constant pentru a nu se prinde. Cand scade, mai adauga supa si amesteca. Adauga sare si continua cu supa pana cand pilaful este aproape gata.\n\nSpre final, adauga si legumele: ardeiul capia, morcovul care este fiert, ardeiul gras si amesteca. Apoi adauga si zucchini taiat cubulete. Amesteca, mai adauga supa si continua acest proces pana cand legumele si orezul sunt fierte.\n\nAsezoneaza cu piper. Daca mai e nevoie, adauga sare. La final, serveste cu patrunjel proaspat tocat.\n\nPofta buna!",
+    "ingredients": {
+      "orez": "100 g",
+      "supa de legume": "0.5 l",
+      "ardei gras": "0.5 buc",
+      "ardei capia": "0.5 buc",
+      "zucchini": "0.5 buc",
+      "morcov": "0.5 buc",
+      "sare": "",
+      "piper": ""
+    },
     "tags": ["Fel principal", "Pranz", "Cina", "Sanatos", "Garnituri"]
   },
   {
     "title": "Chiftelute de legume in sos de rosii",
-    "link": "../Retete/R-chiftelute.html",
     "image": "../Imagini/Chiftelute.jpg",
+    "instructions": "Prin razatoarea mica dam morcovii, cartofii, dovlecelul, o ceapa si doi catei de usturoi. Punem totul intr-un bol, adaugam putina sare, amestecam si lasam pentru 5-7 minute sa elimine apa. Le scurgem foarte bine, le amestecam cu 1-2 linguri de faina, marar tocat marunt sare, si piper proaspat macinat.\n\nFormam bilute mici pe care le trecem prin faina si le punem la prajit in uleiul incins. Le putem face si la cuptor sau la airfryer.\n\nCat timp se rumenesc chiftelele, pregatim si sosul: maruntim ceapa si 2 catei de usturoi si punem la calit intr-o tigaie intinsa, cu putin ulei de masline. Adaugam si sosul de rosii, 100 ml de apa si frunzele de busuioc. Lasam la foc mic pentru 15 minute. Condimentam dupa gust si, inainte de a opri focul, adaugam si chiftelele scurse bine de ulei si, bineinteles, patrunjelul maruntit.\n\nRezultatul? Adevarate delicii perfecte pentru aceasta perioada. \n\nPofta buna!",
+    "ingredients": {
+      "morcovi": "2 bucati",
+      "cartofi": "5 bucati",
+      "ceapa": "2 bucati",
+      "dovlecel": "1 bucata",
+      "usturoi": "4 catei",
+      "sare": "",
+      "piper": "",
+      "marar": "1 legatura",
+      "faina": "1 cana",
+      "ulei de floarea-soarelui": "",
+      "ulei de masline": "1 lingura",
+      "sos de rosii": "700 g",
+      "apa": "100 ml",
+      "busuioc": "",
+      "patrunjel": "1 legatura"
+    },
     "tags": ["Fel principal", "Pranz", "Cina", "Sanatos"]
   }
 ]

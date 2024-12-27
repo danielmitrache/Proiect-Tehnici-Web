@@ -1,21 +1,50 @@
-const recipes = document.querySelectorAll('.recipe');
+const recipeListContainer = document.getElementById('recipe-list');
+let recipes = []
+let favouriteButtonsElements = []
+
+async function loadRecipes() {
+    fetch('../Data/retete.json')
+        .then(response => response.json())
+        .then(data => {
+            const recipesData = data['recipes'];
+            for(let i = 0; i < recipesData.length; i ++) {
+                const recipeDiv = document.createElement('div');
+                recipeDiv.classList.add('recipe');
+                recipeDiv.dataset.id = i;
+                recipeDiv.dataset.tags = recipesData[i]['tags'].map(tag => tag.toLowerCase()).join(',');
+                recipeDiv.innerHTML = `
+                    <img src="${recipesData[i]['image']}" alt="${recipesData[i]['title']}" class="recipe-image">
+                    <div class="recipe-info">
+                        <h2>${recipesData[i]['title']}</h2>
+                        <a href="pagina-reteta.html?id=${i}" class="link-reteta">Vezi reteta</a>
+                    </div>
+                    <button id="bf${i}" class="favourite-button">Adauga la favorite!</button>
+                `;
+                recipeListContainer.appendChild(recipeDiv);
+            }
+        })
+        .then(() => {
+            recipes = document.querySelectorAll('.recipe');
+            favouriteButtonsElements = document.querySelectorAll('.favourite-button');
+            loadFavouriteButtons();
+            for (let favouriteButtonElement of favouriteButtonsElements) {
+                favouriteButtonElement.addEventListener('click', favouriteRecipeClickEvent);
+            }
+        })
+        .catch(error => console.error(error));
+}
 
 window.onload = function () {
-    loadFavouriteButtons();
+    loadRecipes().then(() => {
+        const searchInput = document.querySelector('.search-filter input');
+        searchInput.addEventListener('input', searchRecipesEvent);
 
-    const searchInput = document.querySelector('.search-filter input');
-    searchInput.addEventListener('input', searchRecipesEvent);
-
-    const searchButton = document.getElementById("search-button");
-    searchButton.addEventListener('click', filterRecipesEvent);
-
-    let favouriteButtons = document.querySelectorAll('.favourite-button');
-    favouriteButtons.forEach(button => {
-        button.addEventListener('click', favouriteRecipeClickEvent);
+        const searchButton = document.getElementById("search-button");
+        searchButton.addEventListener('click', filterRecipesEvent);
     });
 }
 
-function searchRecipesEvent(event){
+function searchRecipesEvent(){
     const searchInput = document.querySelector('.search-filter input');
     const searchValue = searchInput.value.toLowerCase();
     if (searchValue === '') {
@@ -34,7 +63,7 @@ function searchRecipesEvent(event){
     }
 }
 
-function filterRecipesEvent(event) {
+function filterRecipesEvent() {
     const filterSelector = document.getElementById("filter");
     const filterValue = filterSelector.value.toLowerCase();
     if(filterValue === 'toate'){
@@ -65,7 +94,9 @@ function filterRecipesEvent(event) {
     }
 }
 
-function favouriteRecipeClickEvent(event) {
+function favouriteRecipeClickEvent() {
+    console.log('favouriteRecipeClickEvent');
+
     let favouriteRecipe = this.parentElement;
     let recipeId = favouriteRecipe.dataset.id;
 
