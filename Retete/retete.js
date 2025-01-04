@@ -7,6 +7,23 @@ async function loadRecipes() {
         .then(response => response.json())
         .then(data => {
             const recipesData = data['recipes'];
+
+            //Completam optiunile de filtrare
+            let tags = [];
+            for(let i = 0; i < recipesData.length; i++){
+                for(let tag of recipesData[i]['tags']) {
+                    if (!tags.includes(tag)) {
+                        tags.push(tag);
+                    }
+                }
+            }
+            for(let recipeTag of tags){
+                const option = document.createElement('option');
+                option.value = recipeTag;
+                option.innerText = recipeTag[0].toUpperCase() + recipeTag.slice(1);
+                document.getElementById('filter').appendChild(option);
+            }
+
             for(let i = 0; i < recipesData.length; i ++) {
                 const recipeDiv = document.createElement('div');
                 recipeDiv.classList.add('recipe');

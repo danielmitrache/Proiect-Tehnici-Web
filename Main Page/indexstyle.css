@@ -328,6 +328,35 @@ nav {
     animation: headShake 5s infinite;
 }
 
+.profile-widget {
+    background-color: var(--main-bg-color);
+    padding: 1em;
+    border-radius: 1em;
+    margin-top: 1em;
+    box-shadow: rgba(26, 26, 25, 0.7) 0.5em 0.5em 1em;
+    outline: #111 solid 0.15em;
+}
+
+.profile-widget .profile-buttons button{
+    background-color: var(--complementary-bg-color);
+    color: var(--white);
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0.5em;
+}
+
+.profile-widget .profile-buttons button:hover {
+    background-color: #31400a;
+}
+
+.welcome-message {
+    color: var(--white);
+    font-size: 2em;
+}
+
 @media (max-width: 1200px) {
     .header {
         width: 100%;

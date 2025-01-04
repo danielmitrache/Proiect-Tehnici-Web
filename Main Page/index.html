@@ -5,41 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Retete culinare de post</title>
     <link rel = "stylesheet" href = "indexstyle.css">
-    <script src = "index.js"></script>
+    <script src = "index.js" defer></script>
     <link rel="icon" href="../Imagini/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="../website-header.js" defer></script>
 </head>
 <body>
 <div class = "container">
     <header class="header">
-        <a href="index.html"><img src="../Imagini/LOGOPNG.png" alt="Logo"></a>
-        <nav class = "headernav">
-            <div class = "headerlinks">
-                <a id = "calendarpost">Calendar Post</a>
-                <div class="dropdown-content">
-                    <a href="../Calendar%20Page/calendarpost.html#nov2024">Noiembrie 2024</a>
-                    <a href="../Calendar%20Page/calendarpost.html#dec2024">Decembrie 2024</a>
-                    <a href="../Calendar%20Page/calendarpost.html#ian2025">Ianuarie 2025</a>
-                </div>
-            </div>
-            <div class = "headerlinks">
-                <a href="../Retete/retete.html">Retete</a>
-            </div>
-            <div class = "headerlinks">
-                <a>Mai Multe</a>
-                <div class="dropdown-content">
-                    <a href="../Contact%20Page/contact.html">Contact</a>
-                    <a href="../About%20Page/listacumparaturi.html">Fa o lista de cumparaturi</a>
-                    <a href="../Own%20Recipes%20Page/reteteproprii.html">Propriile retete</a>
-                </div>
-            </div>
-        </nav>
     </header>
     <main class="main">
         <div class = "content">
-            <h1 id = "titlu">Retete culinare de post</h1>
-            <h2 id = "welcometext">Descoperiți o varietate de rețete delicioase și ușor de preparat, care sunt perfecte pentru cei care tin post. Fie că sunteți în căutarea unor mese sănătoase, deserturi delicioase sau gustări rapide, avem ceva pentru toată lumea.</h2>
-            <a href = "../Retete/R-mamaligalagratar.html"><h3 id = "titluretetazilei">Reteta zilei</h3></a>
+            <h1 id = "titlu">Rețete culinare de post</h1>
+            <h2 id = "welcometext">Descoperiți o varietate de rețete delicioase și ușor de preparat, care sunt perfecte pentru cei care țin post. Fie că sunteți în căutarea unor mese sănătoase, deserturi delicioase sau gustări rapide, avem ceva pentru toată lumea.</h2>
+            <a href = "../Retete/R-mamaligalagratar.html"><h3 id = "titluretetazilei">Rețeta zilei</h3></a>
             <div class = "recipe">
                 <img src="../Imagini/MamaligaLaGratar.jpg" alt="Mamaliga la gratar cu spanac si ciuperci">
                 <h3>Mamaliga la gratar cu spanac si ciuperci</h3>
@@ -60,12 +39,19 @@
                 </form>
             </div>
 
+            <div class="profile-widget">
+                <div id="profile-content"></div>
+                <div class="profile-buttons">
+                    <button id="logout">Logout</button>
+                </div>
+            </div>
+
             <div class="popular-recipes">
                 <h2>Rețete Populare</h2>
                 <ul>
-                    <li><a href="../Retete/R-mamaligalagratar.html">Mamaliga la gratar cu spanac si ciuperci</a></li>
-                    <li><a href="../Retete/R-pilaf.html">Pilaf de orez cu legume</a></li>
-                    <li><a href="../Retete/R-chiftelute.html">Chiftelute de legume in sos de rosii</a></li>
+                    <li><a href="../Retete/pagina-reteta.html?id=10">Mamaliga la gratar cu spanac si ciuperci</a></li>
+                    <li><a href="../Retete/pagina-reteta.html?id=6">Pilaf de orez cu legume</a></li>
+                    <li><a href="../Retete/pagina-reteta.html?id=7">Chiftelute de legume in sos de rosii</a></li>
                 </ul>
             </div>
 
