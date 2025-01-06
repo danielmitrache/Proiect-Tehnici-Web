@@ -103,3 +103,9 @@ nav {
         width: 100%;
     }
 }
+
+@media (any-pointer: coarse) {
+    .headernav a:hover {
+        color: var(--white);
+    }
+}
