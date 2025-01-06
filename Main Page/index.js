@@ -1,4 +1,4 @@
-fetch('../Data/retete.json')
+fetch('Data/retete.json')
     .then(response => response.json())
     .then(data => {
         const recipes = data.recipes;
@@ -6,11 +6,12 @@ fetch('../Data/retete.json')
         const today = new Date().getDay();
         const recipeOfTheDay = today % recipes.length;
 
+        console.log(recipes[recipeOfTheDay]);
+
         document.querySelector('.recipe img').src = recipes[recipeOfTheDay].image;
         document.querySelector('.recipe h3').textContent = recipes[recipeOfTheDay].title;
-        document.querySelector('.content a').href = `../Retete/pagina-reteta.html?id=${recipeOfTheDay}`;
+        document.querySelector('.content a').href = `Retete/pagina-reteta.html?id=${recipeOfTheDay}`;
     });
-
 
 let loginButton = document.getElementById('login');
 let registerButton = document.getElementById('register');
@@ -22,7 +23,7 @@ loginButton.addEventListener('click', () => {
         let username = usernameField.value;
         let password = passwordField.value;
 
-        fetch('../Data/users.json')
+        fetch('Data/users.json')
             .then(response => response.json())
             .then(data => {
                 const users = data['users'];
@@ -89,7 +90,7 @@ if ('Notification' in window) {
                         setTimeout(() => {
                                 new Notification('Retete de Post', {
                                         body: 'Nu uita sa te abonezi la Newsletter.',
-                                        icon: '../Imagini/LOGOPNG.png'
+                                        icon: 'Imagini/LOGOPNG.png'
                                 });
                         }, 30000);
                 }
