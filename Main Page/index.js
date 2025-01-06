@@ -6,7 +6,6 @@ fetch('Data/retete.json')
         const today = new Date().getDay();
         const recipeOfTheDay = today % recipes.length;
 
-        console.log(recipes[recipeOfTheDay]);
 
         document.querySelector('.recipe img').src = recipes[recipeOfTheDay].image;
         document.querySelector('.recipe h3').textContent = recipes[recipeOfTheDay].title;

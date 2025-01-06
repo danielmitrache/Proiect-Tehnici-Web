@@ -171,6 +171,39 @@ body{
         flex-direction: column;
         align-items: center;
     }
+    .search-filter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #search {
+        margin: 0.5em;
+        width: 90%;
+    }
+    #filter{
+        margin: 0.5em;
+        width: 50%;
+    }
+    #search-button {
+        margin: 0.5em;
+    }
+    .recipe{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1em;
+    }
+    .recipe-list img{
+        width: 80%;
+        height: auto;
+        display: flex;
+        margin: auto;
+    }
+    .favourite-button{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2em;
+    }
 }
 
 @media (max-width: 540px) {
