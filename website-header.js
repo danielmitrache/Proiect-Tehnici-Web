@@ -1,6 +1,6 @@
 headerElement = document.getElementsByTagName("header")[0];
 headerElement.innerHTML = `
-    <a href="../Main%20Page/index.html"><img src="../Imagini/LOGOPNG.png" alt="Logo"></a>
+    <a href="../index.html"><img src="../Imagini/LOGOPNG.png" alt="Logo"></a>
     <nav class="headernav">
       <div class="headerlinks">
         <a id="calendarpost">Calendar Post</a>
