@@ -319,7 +319,7 @@ body{
         width: 95%;
     }
     #welcometext {
-        padding: 0.2em;
+        margin: 1em;
     }
     body, .container, .header, .main, .content, .side{
         margin: 0;
