@@ -28,8 +28,10 @@ fetch('../Data/retete.json')
         const tableBody = document.createElement('tbody');
         for(let ingredient of Object.keys(recipeData['ingredients'])){
             const row = document.createElement('tr');
+            let cantitate = recipeData['ingredients'][ingredient];
+            cantitate = cantitate.replace(',', '.');
             row.innerHTML = `
-                <td>${recipeData['ingredients'][ingredient]}</td>
+                <td>${cantitate}</td>
                 <td>${ingredient}</td>
             `;
             tableBody.appendChild(row);
