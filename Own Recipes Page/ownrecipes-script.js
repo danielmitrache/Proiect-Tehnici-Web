@@ -118,6 +118,71 @@ function deleteParentRecipe(){
     writeRecipes();
 }
 
+const canvas = document.getElementById('canvas');
+
 window.onload = function() {
     writeRecipes();
+
+    canvas.style.display = 'none';
+    drawChefHat();
 }
+
+function drawChefHat() {
+
+    const button = document.getElementById('add-recipe-button');
+    canvas.width = 100;
+    canvas.height = 100;
+    canvas.style.width = '5em';
+    canvas.style.height = '5em';
+
+    const ctx = canvas.getContext('2d');
+
+    const scale = 0.65;
+    const offsetX = -18;
+    const offsetY = 25;
+
+    ctx.fillStyle = 'white';
+    ctx.strokeStyle = 'black';
+    ctx.lineWidth = 1;
+
+    ctx.beginPath();
+    ctx.arc((70 + offsetX) * scale, (60 + offsetY) * scale, 40 * scale, Math.PI, 1.65 * Math.PI); // Symmetrical left arc
+    ctx.arc((100 + offsetX) * scale, (30 + offsetY) * scale, 40 * scale, 1.1 * Math.PI, 1.9 * Math.PI); // Middle curve
+    ctx.arc((130 + offsetX) * scale, (60 + offsetY) * scale, 40 * scale, 1.6 * Math.PI, 2 * Math.PI); // Right curve
+
+    ctx.lineTo((160 + offsetX) * scale, (90 + offsetY) * scale);
+    ctx.lineTo((40 + offsetX) * scale, (90 + offsetY) * scale);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = 'white';
+    ctx.beginPath();
+    ctx.moveTo((50 + offsetX) * scale, (90 + offsetY) * scale);
+    ctx.lineTo((150 + offsetX) * scale, (90 + offsetY) * scale);
+    ctx.lineTo((140 + offsetX) * scale, (120 + offsetY) * scale);
+    ctx.lineTo((60 + offsetX) * scale, (120 + offsetY) * scale);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo((60 + offsetX) * scale, (120 + offsetY) * scale);
+    ctx.quadraticCurveTo(
+        (100 + offsetX) * scale,
+        (110 + offsetY) * scale,
+        (140 + offsetX) * scale,
+        (120 + offsetY) * scale
+    );
+    ctx.stroke();
+
+}
+
+const button = document.getElementById('add-recipe-button');
+button.addEventListener('click', () => {
+    if (canvas.style.display === 'none') {
+        canvas.style.display = 'block';
+    } else {
+        canvas.style.display = 'none';
+    }
+});
