@@ -32,6 +32,7 @@ document.getElementById('add-recipe-form').addEventListener('submit', function(e
 
     this.reset();
     this.style.display = 'none';
+    toggleCanvas();
 });
 
 function writeRecipes(){
@@ -146,9 +147,9 @@ function drawChefHat() {
     ctx.lineWidth = 1;
 
     ctx.beginPath();
-    ctx.arc((70 + offsetX) * scale, (60 + offsetY) * scale, 40 * scale, Math.PI, 1.65 * Math.PI); // Symmetrical left arc
-    ctx.arc((100 + offsetX) * scale, (30 + offsetY) * scale, 40 * scale, 1.1 * Math.PI, 1.9 * Math.PI); // Middle curve
-    ctx.arc((130 + offsetX) * scale, (60 + offsetY) * scale, 40 * scale, 1.6 * Math.PI, 2 * Math.PI); // Right curve
+    ctx.arc((70 + offsetX) * scale, (60 + offsetY) * scale, 40 * scale, Math.PI, 1.65 * Math.PI);
+    ctx.arc((100 + offsetX) * scale, (30 + offsetY) * scale, 40 * scale, 1.1 * Math.PI, 1.9 * Math.PI);
+    ctx.arc((130 + offsetX) * scale, (60 + offsetY) * scale, 40 * scale, 1.6 * Math.PI, 2 * Math.PI); 
 
     ctx.lineTo((160 + offsetX) * scale, (90 + offsetY) * scale);
     ctx.lineTo((40 + offsetX) * scale, (90 + offsetY) * scale);
@@ -179,10 +180,11 @@ function drawChefHat() {
 }
 
 const button = document.getElementById('add-recipe-button');
-button.addEventListener('click', () => {
+button.addEventListener('click', toggleCanvas);
+function toggleCanvas(){
     if (canvas.style.display === 'none') {
         canvas.style.display = 'block';
     } else {
         canvas.style.display = 'none';
     }
-});
+}
