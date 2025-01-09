@@ -15,7 +15,7 @@ document.getElementById('add-recipe-form').addEventListener('submit', function(e
     const ingredients = document.getElementById('ingredients').value;
     const instructions = document.getElementById('instructions').value;
 
-    const regexIngrediente = /^(\d+(\.\d+)?[^#]*#[a-zA-Z ]+(\n)?|[a-zA-Z ]+)+$/;
+    const regexIngrediente = /^(\d+(\.\d+)?[^#]*#[a-zA-Z ]+(\n)?|[a-zA-Z ]+(\n)?)+$/;
     if (!regexIngrediente.test(ingredients)) {
         alert('Adauga ingredientele in formatul: "cantitate#ingredient" sau "ingredient" daca nu ai cantitate!');
         return;
